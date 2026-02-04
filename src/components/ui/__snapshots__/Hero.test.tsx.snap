@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero > matches snapshot for headline + subheading state 1`] = `
+<section
+  class="py-12 md:py-16 text-center"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold text-midnight-blue-900 leading-tight tracking-tighter"
+  >
+    Find clarity, get unstuck
+  </h1>
+  <p
+    class="mt-4 text-lg md:text-xl text-grey-700 leading-snug"
+  >
+    Take a short test to discover yourself
+  </p>
+</section>
+`;
+
+exports[`Hero > matches snapshot for headline-only state 1`] = `
+<section
+  class="py-12 md:py-16 text-center"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold text-midnight-blue-900 leading-tight tracking-tighter"
+  >
+    Headline Only
+  </h1>
+</section>
+`;

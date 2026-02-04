@@ -22,7 +22,10 @@ Multi-sprint work requires explicit approval from Thomas between sprints.
 **Skills:**
 - `.claude/skills/delegation/SKILL.md` - PM orchestrator coordination guide
 - `.claude/skills/interview/SKILL.md` - PM orchestrator discovery conversation guide
+- `.claude/skills/interview/references/output-templates.md` - Interview output templates reference
+- `.claude/skills/interview/references/question-frameworks.md` - Interview question frameworks reference
 - `.claude/skills/skill-creator/SKILL.md` - Skill creation and workflow builder
+- `.claude/skills/skill-creator/references/resources.md` - Skill creation resources reference
 
 **Context Preservation Through Delegation is Critical**
 
@@ -111,10 +114,14 @@ From PRD.md (Non-negotiable):
 
 ## Commands
 
-No build commands configured yet. Commands will be added as project infrastructure is set up:
-- Test: `npm test` (after test framework added in Sprint 1)
-- Build: `npm run build` (after Next.js configured in Sprint 1)
-- Lint: `npm run lint` (after ESLint configured in Sprint 1)
+All commands configured and ready:
+- Dev: `npm run dev` - Start development server on http://localhost:3000
+- Build: `npm run build` - Production build with TypeScript type-check
+- Start: `npm start` - Serve production build locally
+- Test: `npm test` - Run Vitest with coverage
+- Lint: `npm run lint` - Run ESLint
+- Format: `npm run format` - Auto-format with Prettier
+- Format check: `npm run format:check` - Verify code is formatted
 
 ---
 

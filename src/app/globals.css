@@ -1,0 +1,207 @@
+/* ---------------------------------------------------------------------------
+   Tailwind CSS v4 -- CSS-based configuration
+   All design tokens from DESIGN_TOKENS.md are declared in @theme below.
+   No tailwind.config.ts is needed; this file IS the config.
+   --------------------------------------------------------------------------- */
+
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Theme tokens (DESIGN_TOKENS.md verbatim)
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* -----------------------------------------------------------------------
+     1. COLOURS
+     ----------------------------------------------------------------------- */
+
+  /* 1.1 Moss Green (primary) */
+  --color-moss-green-50: #f2f7f2;
+  --color-moss-green-100: #e1ede1;
+  --color-moss-green-200: #c4dbc5;
+  --color-moss-green-500: #4a7c4e;
+  --color-moss-green-700: #2e5532;
+  --color-moss-green-900: #1b3320;
+
+  /* 1.2 Kirsberry-Wood Brown (primary) */
+  --color-kirsberry-50: #f5f0ed;
+  --color-kirsberry-100: #ebe0d9;
+  --color-kirsberry-200: #d4c4b8;
+  --color-kirsberry-500: #8b4e3a;
+  --color-kirsberry-700: #6b3528;
+  --color-kirsberry-900: #3d1f16;
+
+  /* 1.3 Beige (neutral warm) */
+  --color-beige-50: #fdfbf8;
+  --color-beige-100: #f7f2ec;
+  --color-beige-200: #ede6db;
+  --color-beige-400: #d5ccbf;
+
+  /* 1.4 Matte Off-White (neutral warm-cool bridge) */
+  --color-off-white-50: #fafaf8;
+  --color-off-white-100: #f4f4f1;
+  --color-off-white-200: #e8e8e4;
+
+  /* 1.5 Orange -- CTA accent (special-purpose) */
+  --color-orange-500: #e8753a;
+  --color-orange-600: #d4652e;
+  --color-orange-700: #ba5524;
+
+  /* 1.6 Midnight Blue (cool accent) */
+  --color-midnight-blue-100: #e8ecf4;
+  --color-midnight-blue-500: #2c3e6b;
+  --color-midnight-blue-900: #1a2440;
+
+  /* 1.7 Neutral Grey */
+  --color-grey-50: #fafafa;
+  --color-grey-100: #f0efed;
+  --color-grey-200: #e2e1de;
+  --color-grey-300: #c9c8c4;
+  --color-grey-400: #9e9d98;
+  --color-grey-500: #6b6b65;
+  --color-grey-600: #4e4e48;
+  --color-grey-700: #3a3a34;
+  --color-grey-800: #252522;
+  --color-grey-900: #111110;
+
+  /* 1.8 Semantic / State colours */
+  --color-success: #3a7d5c;
+  --color-warning: #c48a2c;
+  --color-error: #b83232;
+  --color-info: #2c3e6b;
+
+  /* -----------------------------------------------------------------------
+     2. TYPOGRAPHY
+     ----------------------------------------------------------------------- */
+
+  /* 2.1 Font families */
+  --font-sans:
+    'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',
+    'Roboto', 'sans-serif';
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'monospace';
+
+  /* 2.3 Type scale (major-third ~1.25 ratio, rem units) */
+  --font-size-xs: 0.75rem; /* 12px -- fine labels, badges, disclaimers */
+  --font-size-sm: 0.875rem; /* 14px -- captions, meta text, time estimates */
+  --font-size-base: 1rem; /* 16px -- body paragraphs (default) */
+  --font-size-lg: 1.125rem; /* 18px -- card descriptions, lead text */
+  --font-size-xl: 1.25rem; /* 20px -- card titles (h3) */
+  --font-size-2xl: 1.5rem; /* 24px -- section subheadings */
+  --font-size-3xl: 1.875rem; /* 30px -- section headings (h2 landing) */
+  --font-size-4xl: 2.25rem; /* 36px -- hero subheading */
+  --font-size-5xl: 3rem; /* 48px -- hero headline (tablet+) */
+  --font-size-6xl: 3.75rem; /* 60px -- hero headline (1440px+) */
+
+  /* 2.4 Line heights */
+  --line-height-tight: 1.2; /* headlines only */
+  --line-height-snug: 1.375; /* subheadings */
+  --line-height-normal: 1.5; /* body text */
+  --line-height-relaxed: 1.625; /* long-form passages */
+
+  /* 2.5 Letter spacing */
+  --tracking-tighter: -0.025em; /* headlines */
+  --tracking-tight: -0.015em; /* subheadings */
+  --tracking-normal: 0em; /* body */
+  --tracking-wide: +0.025em; /* labels, badges */
+
+  /* -----------------------------------------------------------------------
+     3. SPACING -- Tailwind defaults are sufficient (base unit 4px / 0.25rem).
+        No overrides needed per DESIGN_TOKENS.md section 3.1.
+     ----------------------------------------------------------------------- */
+
+  /* 3.2 Max-width containers -- map to Tailwind built-in max-w-* tokens.
+     Listed explicitly so the values are self-documenting. */
+  --max-w-container-sm: 640px;
+  --max-w-container-md: 768px;
+  --max-w-container-lg: 1024px;
+  --max-w-container-xl: 1200px;
+  --max-w-container-2xl: 1440px;
+
+  /* -----------------------------------------------------------------------
+     4. BORDER RADIUS
+     ----------------------------------------------------------------------- */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* -----------------------------------------------------------------------
+     5. BOX SHADOWS (warm-tinted: rgba(30, 28, 24, ...))
+     ----------------------------------------------------------------------- */
+  --shadow-subtle:
+    0 1px 2px 0 rgba(30, 28, 24, 0.06), 0 1px 3px 1px rgba(30, 28, 24, 0.04);
+  --shadow-medium:
+    0 2px 6px -1px rgba(30, 28, 24, 0.1), 0 2px 4px -2px rgba(30, 28, 24, 0.06);
+  --shadow-prominent:
+    0 6px 16px -3px rgba(30, 28, 24, 0.14),
+    0 4px 6px -4px rgba(30, 28, 24, 0.08);
+}
+
+/* ---------------------------------------------------------------------------
+   CSS custom-property fallback layer
+   Re-exports every accent / brand colour as a plain CSS variable on :root
+   so that non-Tailwind code (inline styles, third-party widgets, future
+   vanilla-CSS layers) can reference them directly.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Moss Green */
+  --color-moss-green-50: #f2f7f2;
+  --color-moss-green-100: #e1ede1;
+  --color-moss-green-200: #c4dbc5;
+  --color-moss-green-500: #4a7c4e;
+  --color-moss-green-700: #2e5532;
+  --color-moss-green-900: #1b3320;
+
+  /* Kirsberry-Wood Brown */
+  --color-kirsberry-50: #f5f0ed;
+  --color-kirsberry-100: #ebe0d9;
+  --color-kirsberry-200: #d4c4b8;
+  --color-kirsberry-500: #8b4e3a;
+  --color-kirsberry-700: #6b3528;
+  --color-kirsberry-900: #3d1f16;
+
+  /* Beige */
+  --color-beige-50: #fdfbf8;
+  --color-beige-100: #f7f2ec;
+  --color-beige-200: #ede6db;
+  --color-beige-400: #d5ccbf;
+
+  /* Matte Off-White */
+  --color-off-white-50: #fafaf8;
+  --color-off-white-100: #f4f4f1;
+  --color-off-white-200: #e8e8e4;
+
+  /* Orange (CTA accent) */
+  --color-orange-500: #e8753a;
+  --color-orange-600: #d4652e;
+  --color-orange-700: #ba5524;
+
+  /* Midnight Blue */
+  --color-midnight-blue-100: #e8ecf4;
+  --color-midnight-blue-500: #2c3e6b;
+  --color-midnight-blue-900: #1a2440;
+
+  /* Semantic / State */
+  --color-success: #3a7d5c;
+  --color-warning: #c48a2c;
+  --color-error: #b83232;
+  --color-info: #2c3e6b;
+}
+
+/* ---------------------------------------------------------------------------
+   Base resets (carried forward from scaffold, adapted for Tailwind preflight)
+   --------------------------------------------------------------------------- */
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,15 @@
+# Protected orchestration files
+.claude/
+
+# Planning and design documentation (not source code)
+PRD.md
+IMPLEMENTATION_PLAN.md
+PROJECT_STATUS.md
+DESIGN_TOKENS.md
+README.md
+
+# Next.js / build artifacts
+.next/
+out/
+build/
+node_modules/

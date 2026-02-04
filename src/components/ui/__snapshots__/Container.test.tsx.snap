@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Container > matches snapshot for default state 1`] = `
+<div
+  class="w-full max-w-7xl mx-auto px-4 md:px-6"
+>
+  Snapshot child
+</div>
+`;
